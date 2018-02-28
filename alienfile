@@ -1,0 +1,25 @@
+use alienfile;
+
+share {
+	requires 'Alien::gmake' => 0.14;
+	requires 'Alien::patch' => 0.08;
+
+	plugin Download => (
+		url => 'http://www.willus.com/k2pdfopt/src/',
+		version => qr/k2pdfopt_v([\w\.]+)_src\.zip/,
+	);
+
+	plugin Extract => 'zip';
+
+	plugin 'Build::MSYS' => ();
+
+	build [
+		'%{patch} -p1 < %{.install.patch}/0001-Comment-out-third-party-libraries.patch',
+		'%{patch} -p1 < %{.install.patch}/0002-Add-include-guard-on-third-party-library-source-file.patch',
+		'%{patch} -p1 < %{.install.patch}/0003-Dewarp-requires-Leptonica.patch',
+		'%{patch} -p1 < %{.install.patch}/0004-Do-not-use-ocr_max_columns-member-when-OCR-not-avail.patch',
+		'%{patch} -p1 < %{.install.patch}/0005-Enable-K2PDFOPT_KINDLEPDFVIEWER-for-non-GUI-build.patch',
+
+		'%{gmake} -f %{.install.patch}/Makefile prefix=%{.install.prefix} install'
+	];
+};

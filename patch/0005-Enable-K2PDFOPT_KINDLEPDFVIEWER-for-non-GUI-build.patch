@@ -1,0 +1,25 @@
+From 3367c12e6cd810327f7ae41c26b7fbe3644e0819 Mon Sep 17 00:00:00 2001
+From: Zakariyya Mughal <zaki.mughal@gmail.com>
+Date: Wed, 28 Feb 2018 10:53:34 -0500
+Subject: [PATCH 5/5] Enable K2PDFOPT_KINDLEPDFVIEWER for non-GUI build
+
+---
+ k2pdfoptlib/k2pdfopt.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/k2pdfoptlib/k2pdfopt.h b/k2pdfoptlib/k2pdfopt.h
+index 5220f48..841865c 100644
+--- a/k2pdfoptlib/k2pdfopt.h
++++ b/k2pdfoptlib/k2pdfopt.h
+@@ -70,7 +70,7 @@
+ #include <willus.h>
+ 
+ /* Uncomment below if compiling for Kindle PDF Viewer */
+-/* #define K2PDFOPT_KINDLEPDFVIEWER */
++#define K2PDFOPT_KINDLEPDFVIEWER
+ 
+ /*
+ ** The HAVE_..._LIB defines should now be carried over from willus.h,
+-- 
+2.16.1
+

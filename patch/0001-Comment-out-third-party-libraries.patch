@@ -1,0 +1,84 @@
+From 9856635e8b3150afe6d191bd4a8d44eff0aa21dc Mon Sep 17 00:00:00 2001
+From: Zakariyya Mughal <zaki.mughal@gmail.com>
+Date: Wed, 28 Feb 2018 10:50:36 -0500
+Subject: [PATCH 1/5] Comment out third-party libraries
+
+---
+ willuslib/willus.h | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+diff --git a/willuslib/willus.h b/willuslib/willus.h
+index e9f56c4..8b99d9c 100644
+--- a/willuslib/willus.h
++++ b/willuslib/willus.h
+@@ -232,31 +232,31 @@ typedef double  real;
+ #else /* USE_CMAKE */
+ 
+ #ifndef HAVE_Z_LIB
+-#define HAVE_Z_LIB
++/*#define HAVE_Z_LIB*/
+ #endif
+ #ifndef HAVE_PNG_LIB
+-#define HAVE_PNG_LIB
++/*#define HAVE_PNG_LIB*/
+ #endif
+ #ifndef HAVE_JPEG_LIB
+-#define HAVE_JPEG_LIB
++/*#define HAVE_JPEG_LIB*/
+ #endif
+ #ifndef HAVE_MUPDF_LIB
+-#define HAVE_MUPDF_LIB
++/*#define HAVE_MUPDF_LIB*/
+ #endif
+ #ifndef HAVE_GHOSTSCRIPT
+-#define HAVE_GHOSTSCRIPT
++/*#define HAVE_GHOSTSCRIPT*/
+ #endif
+ #ifndef HAVE_DJVU_LIB
+-#define HAVE_DJVU_LIB
++/*#define HAVE_DJVU_LIB*/
+ #endif
+ #ifndef HAVE_GOCR_LIB
+-#define HAVE_GOCR_LIB
++/*#define HAVE_GOCR_LIB*/
+ #endif
+ #ifndef HAVE_LEPTONICA_LIB
+-#define HAVE_LEPTONICA_LIB
++/*#define HAVE_LEPTONICA_LIB*/
+ #endif
+ #ifndef HAVE_TESSERACT_LIB
+-#define HAVE_TESSERACT_LIB
++/*#define HAVE_TESSERACT_LIB*/
+ #endif
+ /*
+ ** Defines for presence of Jasper and GSL (Gnu Scientific Library).
+@@ -274,11 +274,11 @@ typedef double  real;
+ */
+ #ifdef HAVE_JASPER_LIB
+ /* Don't have Jasper */
+-#undef HAVE_JASPER_LIB
++/*#undef HAVE_JASPER_LIB*/
+ #endif
+ #ifdef HAVE_GSL_LIB
+ /* Don't have GSL */
+-#undef HAVE_GSL_LIB
++/*#undef HAVE_GSL_LIB*/
+ #endif
+ 
+ #endif /* USE_CMAKE */
+@@ -286,10 +286,10 @@ typedef double  real;
+ ** Consistency check
+ */
+ #if (!defined(HAVE_Z_LIB) && defined(HAVE_PNG_LIB))
+-#undef HAVE_PNG_LIB
++/*#undef HAVE_PNG_LIB*/
+ #endif
+ #if (!defined(HAVE_LEPTONICA_LIB) && defined(HAVE_TESSERACT_LIB))
+-#undef HAVE_TESSERACT_LIB
++/*#undef HAVE_TESSERACT_LIB*/
+ #endif
+ 
+ #include <stdio.h>
+-- 
+2.16.1
+
