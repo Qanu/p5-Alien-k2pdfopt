@@ -19,7 +19,7 @@ libdir ?= $(prefix)/lib
 incdir ?= $(prefix)/include
 
 CFLAGS+= -I willuslib -I k2pdfoptlib
-LDFLAGS+= -lm
+LDLIBS+= -lm
 
 INSTALL_LIBS := libk2pdfopt.a libwillus.a
 INSTALL_APPS := k2pdfopt$(EXEEXT) kindlepdfviewer/k2view$(EXEEXT)
