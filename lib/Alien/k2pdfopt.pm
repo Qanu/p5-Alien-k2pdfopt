@@ -47,6 +47,11 @@ __END__
 
 This module supports L<Inline's with functionality|Inline/"Playing 'with' Others">.
 
+=head1 K2PDFOPT LICENSE
+
+C<k2pdfopt> is licensed under the GNU Affero General Public License version 3
+or later.
+
 =head1 SEE ALSO
 
 L<k2pdfopt|http://www.willus.com/k2pdfopt/>
