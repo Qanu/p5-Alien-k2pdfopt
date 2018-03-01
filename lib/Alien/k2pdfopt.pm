@@ -17,6 +17,15 @@ sub k2view_path {
 	File::Spec->catfile( File::Spec->rel2abs($self->dist_dir) , 'bin', 'k2view' );
 }
 
+sub cflags {
+	return "-I" . File::Spec->catfile( Alien::k2pdfopt->dist_dir, 'include' );
+}
+
+sub libs {
+	return "-L" . File::Spec->catfile( Alien::k2pdfopt->dist_dir, 'lib' );
+	#" -lk2pdfopt -lwillus";
+}
+
 sub inline_auto_include {
 	return  [ 'k2pdfopt.h' ];
 }
@@ -33,6 +42,11 @@ sub Inline {
 					'lib',  $_ ) }
 				qw(libk2pdfopt.a libwillus.a)
 			);
+		$params->{AUTO_INCLUDE} = <<'		EOF' . $params->{AUTO_INCLUDE};
+		/* undef macros from Perl headers that conflict with willus.h */
+		#undef utf8_length
+		#undef utf16_to_utf8
+		EOF
 
 		return $params;
 	}
