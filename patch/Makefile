@@ -9,9 +9,9 @@ else
 	PATHSEP := :
 	SO := so
 	CP := cp
-endif
 
-all: kindlepdfviewer/k2view$(EXEEXT) libwillus.a libk2pdfopt.a
+	CFLAGS+= -fPIC
+endif
 
 prefix ?= /usr/local
 bindir ?= $(prefix)/bin
@@ -22,9 +22,13 @@ CFLAGS+= -I willuslib -I k2pdfoptlib
 LDFLAGS+= -lm
 
 INSTALL_LIBS := libk2pdfopt.a libwillus.a
-INSTALL_APPS := kindlepdfviewer/k2view$(EXEEXT)
+INSTALL_APPS := k2pdfopt$(EXEEXT) kindlepdfviewer/k2view$(EXEEXT)
+
+all: $(INSTALL_APPS)
 
 kindlepdfviewer/k2view$(EXEEXT): kindlepdfviewer/k2view.c libk2pdfopt.a libwillus.a
+
+k2pdfopt$(EXEEXT): k2pdfopt.c libk2pdfopt.a libwillus.a
 
 install: all
 	install -d $(DESTDIR)$(incdir)
