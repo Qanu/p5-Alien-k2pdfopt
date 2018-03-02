@@ -1,8 +1,9 @@
 use alienfile;
 
+requires 'Alien::gmake' => 0.14;
+requires 'Alien::patch' => 0.08;
+
 share {
-	requires 'Alien::gmake' => 0.14;
-	requires 'Alien::patch' => 0.08;
 
 	plugin Download => (
 		url => 'http://www.willus.com/k2pdfopt/src/',
