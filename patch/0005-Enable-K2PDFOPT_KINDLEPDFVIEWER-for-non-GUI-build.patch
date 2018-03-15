@@ -1,7 +1,7 @@
 From 3367c12e6cd810327f7ae41c26b7fbe3644e0819 Mon Sep 17 00:00:00 2001
 From: Zakariyya Mughal <zaki.mughal@gmail.com>
 Date: Wed, 28 Feb 2018 10:53:34 -0500
-Subject: [PATCH 5/5] Enable K2PDFOPT_KINDLEPDFVIEWER for non-GUI build
+Subject: [PATCH 5/6] Enable K2PDFOPT_KINDLEPDFVIEWER for non-GUI build
 
 ---
  k2pdfoptlib/k2pdfopt.h | 2 +-

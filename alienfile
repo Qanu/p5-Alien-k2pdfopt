@@ -20,6 +20,7 @@ share {
 		'%{patch} -p1 < %{.install.patch}/0003-Dewarp-requires-Leptonica.patch',
 		'%{patch} -p1 < %{.install.patch}/0004-Do-not-use-ocr_max_columns-member-when-OCR-not-avail.patch',
 		'%{patch} -p1 < %{.install.patch}/0005-Enable-K2PDFOPT_KINDLEPDFVIEWER-for-non-GUI-build.patch',
+		'%{patch} -p1 < %{.install.patch}/0006-Include-windows.h-for-non-GUI-Windows-build.patch',
 
 		'%{gmake} -f %{.install.patch}/Makefile prefix=%{.install.prefix} install'
 	];

@@ -1,7 +1,7 @@
 From 3108d51c34304916e967460a20cd8dc91ae1bc87 Mon Sep 17 00:00:00 2001
 From: Zakariyya Mughal <zaki.mughal@gmail.com>
 Date: Wed, 28 Feb 2018 10:51:33 -0500
-Subject: [PATCH 2/5] Add include guard on third-party library source files
+Subject: [PATCH 2/6] Add include guard on third-party library source files
 
 ---
  willuslib/ocrtess.c    | 7 ++++++-

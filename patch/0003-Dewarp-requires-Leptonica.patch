@@ -1,7 +1,7 @@
 From 65694d71f443855dbfc1a63c9915713dd234776c Mon Sep 17 00:00:00 2001
 From: Zakariyya Mughal <zaki.mughal@gmail.com>
 Date: Wed, 28 Feb 2018 10:52:40 -0500
-Subject: [PATCH 3/5] Dewarp requires Leptonica
+Subject: [PATCH 3/6] Dewarp requires Leptonica
 
 ---
  k2pdfoptlib/k2master.c | 2 ++

@@ -1,7 +1,7 @@
 From 9856635e8b3150afe6d191bd4a8d44eff0aa21dc Mon Sep 17 00:00:00 2001
 From: Zakariyya Mughal <zaki.mughal@gmail.com>
 Date: Wed, 28 Feb 2018 10:50:36 -0500
-Subject: [PATCH 1/5] Comment out third-party libraries
+Subject: [PATCH 1/6] Comment out third-party libraries
 
 ---
  willuslib/willus.h | 26 +++++++++++++-------------
