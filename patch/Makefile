@@ -4,6 +4,8 @@ ifdef COMSPEC
 	PATHSEP := ;
 	SO := dll
 	CP := copy
+
+	LDLIBS+= -lgdi32 -luuid -lole32 -lcomdlg32 -lshlwapi
 else
 	EXEEXT :=
 	PATHSEP := :
