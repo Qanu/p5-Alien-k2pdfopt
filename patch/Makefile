@@ -26,6 +26,9 @@ INSTALL_APPS := k2pdfopt$(EXEEXT) kindlepdfviewer/k2view$(EXEEXT)
 
 all: $(INSTALL_APPS)
 
+%$(EXEEXT): %.c
+	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
 kindlepdfviewer/k2view$(EXEEXT): kindlepdfviewer/k2view.c libk2pdfopt.a libwillus.a
 
 k2pdfopt$(EXEEXT): k2pdfopt.c libk2pdfopt.a libwillus.a
