@@ -33,7 +33,7 @@ sub inline_auto_include {
 sub Inline {
 	my ($self, $lang) = @_;
 
-	if('C') {
+	if( $lang eq 'C' ) {
 		my $params = Alien::Base::Inline(@_);
 		$params->{MYEXTLIB} .= ' ' .
 			join( " ",
