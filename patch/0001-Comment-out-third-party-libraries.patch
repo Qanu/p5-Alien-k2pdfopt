@@ -1,17 +1,17 @@
-From 9856635e8b3150afe6d191bd4a8d44eff0aa21dc Mon Sep 17 00:00:00 2001
+From a10c3da899ea49ec590889de5a090bba318b7b3e Mon Sep 17 00:00:00 2001
 From: Zakariyya Mughal <zaki.mughal@gmail.com>
 Date: Wed, 28 Feb 2018 10:50:36 -0500
-Subject: [PATCH 1/6] Comment out third-party libraries
+Subject: [PATCH 1/4] Comment out third-party libraries
 
 ---
  willuslib/willus.h | 26 +++++++++++++-------------
  1 file changed, 13 insertions(+), 13 deletions(-)
 
 diff --git a/willuslib/willus.h b/willuslib/willus.h
-index e9f56c4..8b99d9c 100644
+index 9613387..34f12ec 100644
 --- a/willuslib/willus.h
 +++ b/willuslib/willus.h
-@@ -232,31 +232,31 @@ typedef double  real;
+@@ -266,31 +266,31 @@ typedef double  real;
  #else /* USE_CMAKE */
  
  #ifndef HAVE_Z_LIB
@@ -52,7 +52,7 @@ index e9f56c4..8b99d9c 100644
  #endif
  /*
  ** Defines for presence of Jasper and GSL (Gnu Scientific Library).
-@@ -274,11 +274,11 @@ typedef double  real;
+@@ -308,11 +308,11 @@ typedef double  real;
  */
  #ifdef HAVE_JASPER_LIB
  /* Don't have Jasper */
@@ -66,7 +66,7 @@ index e9f56c4..8b99d9c 100644
  #endif
  
  #endif /* USE_CMAKE */
-@@ -286,10 +286,10 @@ typedef double  real;
+@@ -320,10 +320,10 @@ typedef double  real;
  ** Consistency check
  */
  #if (!defined(HAVE_Z_LIB) && defined(HAVE_PNG_LIB))
@@ -80,5 +80,5 @@ index e9f56c4..8b99d9c 100644
  
  #include <stdio.h>
 -- 
-2.16.1
+2.20.1
 

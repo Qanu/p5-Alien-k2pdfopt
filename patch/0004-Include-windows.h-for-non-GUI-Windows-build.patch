@@ -1,7 +1,7 @@
-From e061e4e545697616e5a2f2c13fd458d9060bbdb3 Mon Sep 17 00:00:00 2001
+From 33c0b895ebbbb24e43e4dc3ab0c0222bf6894816 Mon Sep 17 00:00:00 2001
 From: Zakariyya Mughal <zaki.mughal@gmail.com>
 Date: Thu, 15 Mar 2018 14:20:22 -0400
-Subject: [PATCH 6/6] Include windows.h for non-GUI Windows build
+Subject: [PATCH 4/4] Include windows.h for non-GUI Windows build
 
 This is so that the Windows API functions are available for command line
 use.
@@ -10,7 +10,7 @@ use.
  1 file changed, 3 insertions(+), 1 deletion(-)
 
 diff --git a/k2pdfopt.c b/k2pdfopt.c
-index 0939b81..d7461fb 100644
+index 914dc80..bcabfdb 100644
 --- a/k2pdfopt.c
 +++ b/k2pdfopt.c
 @@ -75,10 +75,12 @@
@@ -28,5 +28,5 @@ index 0939b81..d7461fb 100644
  
  int main(int argc,char *argv[])
 -- 
-2.16.1
+2.20.1
 
