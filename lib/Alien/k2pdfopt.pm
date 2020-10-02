@@ -70,4 +70,4 @@ or later.
 
 L<k2pdfopt|http://www.willus.com/k2pdfopt/>
 
-L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Alien-k2pdfopt/>
+
